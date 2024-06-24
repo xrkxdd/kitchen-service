@@ -2,8 +2,6 @@ from django.db import models
 from django.contrib.auth.models import AbstractUser
 from django.urls import reverse
 
-# Create your models here.
-
 class DishType(models.Model):
     name = models.CharField(max_length=255, unique=False)
 
@@ -15,7 +13,7 @@ class DishType(models.Model):
 
 
 class Cook(AbstractUser):
-    years_of_experience = models.CharField(max_length=255, unique=False)
+    years_of_experience = models.IntegerField()  # Changed from CharField to IntegerField
 
     class Meta:
         verbose_name = "cook"
@@ -36,4 +34,4 @@ class Dish(models.Model):
     cooks = models.ManyToManyField(Cook, related_name="cooks")
 
     def __str__(self):
-        return self.model
+        return self.name

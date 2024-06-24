@@ -1,0 +1,16 @@
+[
+  {
+    "model": "restaurant.dishtype",
+    "pk": 1,
+    "fields": {
+      "name": "pizza"
+    }
+  },
+    {
+    "model": "restaurant.dishtype",
+    "pk": 2,
+    "fields": {
+      "name": "sushi"
+    }
+  }
+]

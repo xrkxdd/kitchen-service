@@ -1,13 +1,18 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-<body>
+{% extends "base.html" %}
 
-</body>
-</html>
+{% block content %}
+    <h1>Restaurant kitchen Service Home</h1>
+    <p>Welcome to Best Restaurant Ever!</p>
+    <h2>Dynamic content</h2>
+    <p>The Restaurant kitchen service has the following record counts:</p>
+    <ul>
+        <li><strong>Dishes:</strong> {{ num_dishes }}</li>
+        <li><strong>Cooks:</strong> {{ num_cooks }}</li>
+        <li><strong>DishTypes:</strong> {{ num_dish_types }}</li>
+    </ul>
+
+    <p>You have visited this page
+        {{ num_visits }} time{{ num_visits|pluralize }}.
+    </p>
+
+{% endblock %}

@@ -46,6 +46,8 @@ def validate_years_of_experience(
         raise ValidationError("years_of_experience should consist of 1 characters")
     if len(years_of_experience) != 2:
         raise ValidationError("years_of_experience should consist of 2 characters")
+    if len(years_of_experience) > 0:
+        raise ValidationError("years_of_experience should be greater than zero")
     elif not years_of_experience[:2].isdigit():
         raise ValidationError("All characters should be digits")
 

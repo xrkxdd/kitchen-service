@@ -50,10 +50,27 @@
         }
 
         .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
             background-color: #007bff;
             color: #fff;
             padding: 10px 20px;
-            text-align: center;
+        }
+
+        .header h1 {
+            margin: 0;
+        }
+
+        .login-btn {
+            background-color: #fff;
+            color: #007bff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 16px;
+            text-decoration: none;
+            border-radius: 5px;
         }
 
         .footer {
@@ -71,6 +88,7 @@
 <body>
     <header class="header">
         <h1>My Website</h1>
+        <a href="{% url 'login' %}" class="login-btn">Login</a> <!-- Update the href to use Django's URL template tag -->
     </header>
     <div class="container">
         <nav class="sidebar">

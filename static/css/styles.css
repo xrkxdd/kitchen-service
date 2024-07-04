@@ -1,8 +1,72 @@
 body {
-    margin-top: 20px;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-image: url('/static/images/background.jpg'); /* Убедитесь, что путь к изображению правильный */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
-.link-to-page {
-    float: right;
-    margin: 0 2px 0 2px;
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #2F4F4F;
+    color: #FFFAF0;
+    padding: 10px 20px;
+}
+
+.header h1 {
+    margin: 0;
+}
+
+.login-btn, .register-btn {
+    background-color: #fff;
+    color: #007bff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.register-btn {
+    margin-left: 10px; /* Добавляет отступ между кнопками */
+}
+
+.container {
+    display: flex;
+    min-height: 100vh;
+}
+
+.sidebar {
+}
+
+.sidebar h2 {
+    text-align: center;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    padding: 10px 0;
+}
+
+.sidebar ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.main-content {
+    flex: 1;
+    padding: 20px;
+}
+
+.footer {
 }
